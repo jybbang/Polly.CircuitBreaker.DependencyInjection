@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
@@ -6,7 +6,7 @@
 		<Company>Junyoung Bang</Company>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<Copyright>https://licenses.nuget.org/BSD-3-Clause</Copyright>
-		<PackageProjectUrl>https://github.com/jybbang/Polly.CircuitBreaker.Extensions.Microsoft.DependencyInjection</PackageProjectUrl>
+		<PackageProjectUrl>https://github.com/jybbang/Polly.CircuitBreaker.Extensions.DependencyInjection</PackageProjectUrl>
 		<Description>Polly.CircuitBreaker for Microsoft.Extensions.DependencyInjection</Description>
 	</PropertyGroup>
 
@@ -14,10 +14,7 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\Polly.CircuitBreaker.Extensions.Microsoft.DependencyInjection.Abstractions\Polly.CircuitBreaker.Extensions.DependencyInjection.Abstractions.csproj" />
+		<PackageReference Include="Polly" Version="7.2.1" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Polly.CircuitBreaker.Extensions.Microsoft.DependencyInjection\Polly.CircuitBreaker.Extensions.DependencyInjection.csproj" />
+    <ProjectReference Include="..\Polly.CircuitBreaker.Extensions.DependencyInjection\Polly.CircuitBreaker.Extensions.DependencyInjection.csproj" />
   </ItemGroup>
 
 </Project>

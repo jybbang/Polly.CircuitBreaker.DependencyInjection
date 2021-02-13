@@ -1,5 +1,4 @@
-﻿using Polly;
-using Polly.CircuitBreaker.Extensions.DependencyInjection.Abstractions;
+﻿using Polly.CircuitBreaker.Extensions.DependencyInjection.Abstractions;
 using System;
 
 namespace Polly.CircuitBreaker.Extensions.DependencyInjection

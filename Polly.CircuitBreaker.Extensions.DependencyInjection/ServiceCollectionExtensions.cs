@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Polly.CircuitBreaker.Extensions.DependencyInjection.Abstractions;
-using System;
 
 namespace Polly.CircuitBreaker.Extensions.DependencyInjection
 {
