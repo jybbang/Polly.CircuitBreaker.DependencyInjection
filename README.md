@@ -5,6 +5,11 @@
 To use, with an `IServiceCollection` instance :
 
 ```c#
+services.AddCircuitBreaker(Configuration);
+```
+Or, you don't use `IConfiguration`
+
+```c#
 services.AddCircuitBreaker();
 ```
 
