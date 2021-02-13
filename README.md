@@ -34,7 +34,7 @@ public class CircuitBreakerBehaviour<TRequest, TResponse> : IPipelineBehavior<TR
 }
 ```
 
-ICircuitBreaker<CategoryName> always return same object when CategoryName is same. (like a ILogger).
+`ICircuitBreaker<CategoryName>` always return same object when CategoryName is same. (like a ILogger).
 
 That means you can not change configuration after circuit breaker initialized. (for the first time calling the GetPolicy function with parameters.)
 
