@@ -3,11 +3,14 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<Authors>Junyoung Bang</Authors>
-		<Company>Junyoung Bang</Company>
+		<Company>jyb</Company>
 		<PackageLicenseExpression></PackageLicenseExpression>
 		<Copyright>https://licenses.nuget.org/BSD-3-Clause</Copyright>
 		<PackageProjectUrl>https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection</PackageProjectUrl>
 		<Description>Polly.CircuitBreaker for Microsoft.Extensions.DependencyInjection</Description>
+		<AssemblyName>Jyb.Polly.CircuitBreaker.DependencyInjection</AssemblyName>
+		<Product>Jyb.Polly.CircuitBreaker.DependencyInjection</Product>
+		<RepositoryUrl>https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
