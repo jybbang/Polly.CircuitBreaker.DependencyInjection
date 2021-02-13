@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polly.CircuitBreaker.DependencyInjection", "Polly.CircuitBreaker.DependencyInjection\Polly.CircuitBreaker.DependencyInjection.csproj", "{D463B120-828B-4B42-997F-CA944DBAC16F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polly.CircuitBreaker.DependencyInjection.Tests", "Polly.CircuitBreaker.DependencyInjection.Tests\Polly.CircuitBreaker.DependencyInjection.Tests.csproj", "{02D1C842-337B-49C0-8E34-39616D593A78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{66D8D6D9-15C5-4407-AEFA-12DB68007615}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-and-deploy.yml = .github\workflows\build-and-deploy.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D463B120-828B-4B42-997F-CA944DBAC16F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D463B120-828B-4B42-997F-CA944DBAC16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D463B120-828B-4B42-997F-CA944DBAC16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D463B120-828B-4B42-997F-CA944DBAC16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02D1C842-337B-49C0-8E34-39616D593A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D1C842-337B-49C0-8E34-39616D593A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D1C842-337B-49C0-8E34-39616D593A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D1C842-337B-49C0-8E34-39616D593A78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06C9727C-1D3B-46C9-95E0-A05B0AD59D98}
+	EndGlobalSection
+EndGlobal

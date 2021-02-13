@@ -17,7 +17,7 @@ namespace Polly.CircuitBreaker.Extensions.DependencyInjection
 
             services.AddTransient(typeof(ICircuitBreaker<>), typeof(CircuitBreaker<>));
 
-            services.Configure<CircuitBreakerOption>(configuration.GetSection(configurationSection).Bind);
+            services.Configure<CircuitBreakerOption>(option => configuration?.GetSection(configurationSection)?.Bind(option));
 
             return services;
         }
