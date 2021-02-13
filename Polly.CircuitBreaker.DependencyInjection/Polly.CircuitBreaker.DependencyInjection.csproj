@@ -4,8 +4,8 @@
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<Authors>Junyoung Bang</Authors>
 		<Company>jyb</Company>
-		<PackageLicenseExpression></PackageLicenseExpression>
-		<Copyright>https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection/blob/master/LICENSE</Copyright>
+		<PackageLicenseExpression>https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection/blob/master/LICENSE</PackageLicenseExpression>
+		<Copyright></Copyright>
 		<PackageProjectUrl>https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection</PackageProjectUrl>
 		<Description>Polly.CircuitBreaker for Microsoft.Extensions.DependencyInjection</Description>
 		<AssemblyName>Jyb.Polly.CircuitBreaker.DependencyInjection</AssemblyName>
