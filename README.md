@@ -1,6 +1,7 @@
 # Polly CircuitBreaker extensions for Microsoft.Extensions.DependencyInjection
 
 [![NuGet](https://img.shields.io/nuget/v/Jyb.Polly.CircuitBreaker.DependencyInjection.svg)](https://www.nuget.org/packages/Jyb.Polly.CircuitBreaker.DependencyInjection/)
+![Build And Deploy](https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection/workflows/Build%20And%20Deploy/badge.svg)
 
 To use, with an `IServiceCollection` instance :
 
