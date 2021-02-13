@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Polly.CircuitBreaker.Extensions.DependencyInjection.Abstractions
+namespace Polly.CircuitBreaker.DependencyInjection.Abstractions
 {
     public interface ICircuitBreakerFactory
     {

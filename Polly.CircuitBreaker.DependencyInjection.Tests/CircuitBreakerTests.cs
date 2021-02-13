@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Polly.CircuitBreaker.Extensions.DependencyInjection.Tests
+namespace Polly.CircuitBreaker.DependencyInjection.Tests
 {
     [TestClass]
     public class CircuitBreakerTests

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Polly.CircuitBreaker.Extensions.DependencyInjection
+namespace Polly.CircuitBreaker.DependencyInjection
 {
     public class CircuitBreakerOption
     {

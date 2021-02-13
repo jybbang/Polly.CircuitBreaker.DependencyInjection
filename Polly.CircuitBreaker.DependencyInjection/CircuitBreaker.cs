@@ -1,7 +1,7 @@
-﻿using Polly.CircuitBreaker.Extensions.DependencyInjection.Abstractions;
+﻿using Polly.CircuitBreaker.DependencyInjection.Abstractions;
 using System;
 
-namespace Polly.CircuitBreaker.Extensions.DependencyInjection
+namespace Polly.CircuitBreaker.DependencyInjection
 {
     public class CircuitBreaker : ICircuitBreaker
     {

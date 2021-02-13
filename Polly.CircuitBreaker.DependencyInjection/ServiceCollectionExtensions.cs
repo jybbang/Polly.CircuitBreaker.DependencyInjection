@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Polly.CircuitBreaker.Extensions.DependencyInjection.Abstractions;
+using Polly.CircuitBreaker.DependencyInjection.Abstractions;
 
-namespace Polly.CircuitBreaker.Extensions.DependencyInjection
+namespace Polly.CircuitBreaker.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {

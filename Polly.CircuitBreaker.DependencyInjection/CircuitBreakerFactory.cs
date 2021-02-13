@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Options;
-using Polly.CircuitBreaker.Extensions.DependencyInjection.Abstractions;
+using Polly.CircuitBreaker.DependencyInjection.Abstractions;
 using System;
 using System.Collections.Concurrent;
 
-namespace Polly.CircuitBreaker.Extensions.DependencyInjection
+namespace Polly.CircuitBreaker.DependencyInjection
 {
     public class CircuitBreakerFactory : ICircuitBreakerFactory
     {

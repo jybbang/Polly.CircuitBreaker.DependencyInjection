@@ -5,7 +5,7 @@ using Moq;
 using System;
 using System.Collections.Generic;
 
-namespace Polly.CircuitBreaker.Extensions.DependencyInjection.Tests
+namespace Polly.CircuitBreaker.DependencyInjection.Tests
 {
     [TestClass]
     public class CircuitBreakerFactoryTests
