@@ -8,13 +8,11 @@ namespace Polly.CircuitBreaker.DependencyInjection
     public class CircuitBreakerFactory : ICircuitBreakerFactory
     {
         private readonly ConcurrentDictionary<string, ICircuitBreaker> _circuitBreakers = new ConcurrentDictionary<string, ICircuitBreaker>();
-        private CircuitBreakerOption _opt;
+        private readonly CircuitBreakerOptions _opt;
 
-        public CircuitBreakerFactory(IOptionsMonitor<CircuitBreakerOption> opt)
+        public CircuitBreakerFactory(IOptionsSnapshot<CircuitBreakerOptions> opt)
         {
-            _opt = opt.CurrentValue;
-
-            opt.OnChange(o => _opt = o);
+            _opt = opt.Value;
         }
 
         public ICircuitBreaker CreateCircuitBreaker<T>()
@@ -37,7 +35,7 @@ namespace Polly.CircuitBreaker.DependencyInjection
 
             return _circuitBreakers.GetOrAdd(
                 categoryName,
-                cb ?? new CircuitBreaker(_opt.ExceptionsAllowed, _opt.DurationOfBreak));
+                cb ?? new CircuitBreaker(_opt.ExceptionsAllowedBeforeBreaking, _opt.DurationOfBreak));
         }
     }
 }
