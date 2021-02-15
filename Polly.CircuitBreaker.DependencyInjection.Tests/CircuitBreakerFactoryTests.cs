@@ -10,19 +10,19 @@ namespace Polly.CircuitBreaker.DependencyInjection.Tests
     [TestClass]
     public class CircuitBreakerFactoryTests
     {
-        private readonly Mock<IOptionsMonitor<CircuitBreakerOption>> _opt;
+        private readonly Mock<IOptionsSnapshot<CircuitBreakerOptions>> _opt;
 
         public CircuitBreakerFactoryTests()
         {
-            _opt = new Mock<IOptionsMonitor<CircuitBreakerOption>>();
+            _opt = new Mock<IOptionsSnapshot<CircuitBreakerOptions>>();
         }
 
         [TestMethod]
         public void ShouldReturnSameBreakerWhenCreateMultiple()
         {
             // given
-            var opt = new CircuitBreakerOption();
-            _opt.Setup(x => x.CurrentValue).Returns(opt);
+            var opt = new CircuitBreakerOptions();
+            _opt.Setup(x => x.Value).Returns(opt);
 
             var factory = new CircuitBreakerFactory(_opt.Object);
 
@@ -42,9 +42,9 @@ namespace Polly.CircuitBreaker.DependencyInjection.Tests
 
             var cbs = new Dictionary<string, CircuitBreaker> { { "test", expect } };
 
-            var opt = new CircuitBreakerOption { CircuitBreakers = cbs };
+            var opt = new CircuitBreakerOptions { CircuitBreakers = cbs };
 
-            _opt.Setup(x => x.CurrentValue).Returns(opt);
+            _opt.Setup(x => x.Value).Returns(opt);
 
             var factory = new CircuitBreakerFactory(_opt.Object);
 
