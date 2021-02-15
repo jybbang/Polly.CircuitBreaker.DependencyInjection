@@ -63,11 +63,11 @@ namespace Polly.CircuitBreaker.DependencyInjection
             IConfiguration configuration,
             ServiceLifetime serviceLifetime = ServiceLifetime.Scoped)
         {
-            var options = configuration?.GetSection(nameof(CircuitBreakerOptions));
+            var configurationSection = configuration?.GetSection(nameof(CircuitBreakerOptions));
 
-            if (options is null) throw new InvalidOperationException($"Can not find section in settings. section:{nameof(CircuitBreakerOptions)}");
+            var options = configurationSection?.Get<CircuitBreakerOptions>() ?? new CircuitBreakerOptions();
 
-            services.AddCircuitBreaker(options.Get<CircuitBreakerOptions>(), serviceLifetime);
+            services.AddCircuitBreaker(options, serviceLifetime);
 
             return services;
         }
