@@ -49,7 +49,7 @@ That means you can not change configuration after circuit breaker initialized. (
 Starting config with your `appsettings.json` :
 
 ```json
-"CircuitBreaker" : {
+"CircuitBreakerOptions" : {
   "CircuitBreakers" : {
     "category1" : { "ExceptionsAllowedBeforeBreaking" : 1, "DurationOfBreak" : "00:01:00" },
     "category2" : { "ExceptionsAllowedBeforeBreaking" : 2, "DurationOfBreak" : "00:02:00" },
