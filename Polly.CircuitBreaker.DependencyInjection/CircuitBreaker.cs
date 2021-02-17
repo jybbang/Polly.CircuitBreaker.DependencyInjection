@@ -73,7 +73,7 @@ namespace Polly.CircuitBreaker.DependencyInjection
 
         public TimeSpan DurationOfBreak => _cb.DurationOfBreak;
 
-        internal CircuitBreaker(ICircuitBreakerFactory circuitBreakerFactory)
+        public CircuitBreaker(ICircuitBreakerFactory circuitBreakerFactory)
         {
             _cb = circuitBreakerFactory.CreateCircuitBreaker<TCategoryName>();
         }

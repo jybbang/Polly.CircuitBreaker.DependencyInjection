@@ -16,6 +16,8 @@ namespace Polly.CircuitBreaker.DependencyInjection.Tests
         public override void ConfigureServices(ServiceCollection service, IConfiguration configuration)
         {
             service.AddCircuitBreaker(configuration);
+            service.AddTransient<Di>();
+            service.AddTransient<DiFactory>();
         }
 
         [TestMethod]
@@ -51,6 +53,48 @@ namespace Polly.CircuitBreaker.DependencyInjection.Tests
             // then
             cb.Should().BeEquivalentTo(cb2);
             cb.ExceptionsAllowedBeforeBreaking.Should().Be(cb2.ExceptionsAllowedBeforeBreaking);
+        }
+
+        [TestMethod]
+        public void ShouldReturnSameCbUsingDi()
+        {
+            // given
+            var cb = _services.GetRequiredService<Di>().Cb;
+            var cb2 = _services.GetRequiredService<Di>().Cb;
+
+            // then
+            cb.Should().BeEquivalentTo(cb2);
+        }
+
+        [TestMethod]
+        public void ShouldReturnSameCbUsingFactory()
+        {
+            // given
+            var cb = _services.GetRequiredService<DiFactory>().Cb;
+            var cb2 = _services.GetRequiredService<DiFactory>().Cb;
+
+            // then
+            cb.Should().BeEquivalentTo(cb2);
+        }
+
+        public class Di
+        {
+            public ICircuitBreaker Cb { get; }
+
+            public Di(ICircuitBreaker<Di> cb)
+            {
+                Cb = cb;
+            }
+        }
+
+        public class DiFactory
+        {
+            public ICircuitBreaker Cb { get; }
+
+            public DiFactory(ICircuitBreakerFactory factory)
+            {
+                Cb = factory.CreateCircuitBreaker<DiFactory>();
+            }
         }
     }
 }

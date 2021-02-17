@@ -12,7 +12,7 @@
 		<Product>Jyb.Polly.CircuitBreaker.DependencyInjection</Product>
 		<RepositoryUrl>https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection</RepositoryUrl>
 		<PackageTags>Polly, CircuitBreaker, Microsoft, Extensions, DependencyInjection, Dependency, Injection</PackageTags>
-		<Version>1.1.0</Version>
+		<Version>1.1.1</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
