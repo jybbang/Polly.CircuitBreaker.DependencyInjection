@@ -7,9 +7,11 @@ namespace Polly.CircuitBreaker.DependencyInjection
     {
         private AsyncCircuitBreakerPolicy _polices;
 
-        public int ExceptionsAllowedBeforeBreaking { get; } = 1;
+        public int ExceptionsAllowedBeforeBreaking { get; set; } = 1;
 
-        public TimeSpan DurationOfBreak { get; } = TimeSpan.FromMinutes(1);
+        public TimeSpan DurationOfBreak { get; set; } = TimeSpan.FromMinutes(1);
+
+        public CircuitBreaker() { }
 
         internal CircuitBreaker(int exceptionsAllowedBeforeBreaking, TimeSpan durationOfBreak)
         {

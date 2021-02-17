@@ -10,7 +10,7 @@ namespace Polly.CircuitBreaker.DependencyInjection
         private readonly ConcurrentDictionary<string, ICircuitBreaker> _circuitBreakers = new ConcurrentDictionary<string, ICircuitBreaker>();
         private readonly CircuitBreakerOptions _opt;
 
-        public CircuitBreakerFactory(IOptionsSnapshot<CircuitBreakerOptions> opt)
+        public CircuitBreakerFactory(IOptions<CircuitBreakerOptions> opt)
         {
             _opt = opt.Value;
         }
