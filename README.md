@@ -2,6 +2,16 @@
 
 [![NuGet](https://img.shields.io/nuget/v/Jyb.Polly.CircuitBreaker.DependencyInjection.svg)](https://www.nuget.org/packages/Jyb.Polly.CircuitBreaker.DependencyInjection/)
 ![Build And Deploy](https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection/workflows/Build%20And%20Deploy/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-BSD3-yellow.svg)](https://github.com/jybbang/Polly.CircuitBreaker.DependencyInjection/blob/master/LICENSE)
+
+**Polly.CircuitBreaker.DependencyInjection
+ is a Polly CircuitBreaker extensions for Microsoft.Extensions.DependencyInjection.**
+
+You can install [Polly.CircuitBreaker.DependencyInjection with NuGet](https://www.nuget.org/packages/Jyb.Polly.CircuitBreaker.DependencyInjection/):
+
+```
+Install-Package Jyb.Polly.CircuitBreaker.DependencyInjection
+```
 
 To use, with an `IServiceCollection` instance :
 
@@ -49,7 +59,7 @@ That means you can not change configuration after circuit breaker initialized. (
 Starting config with your `appsettings.json` :
 
 ```json
-"CircuitBreaker" : {
+"CircuitBreakerOptions" : {
   "CircuitBreakers" : {
     "category1" : { "ExceptionsAllowedBeforeBreaking" : 1, "DurationOfBreak" : "00:01:00" },
     "category2" : { "ExceptionsAllowedBeforeBreaking" : 2, "DurationOfBreak" : "00:02:00" },
@@ -57,3 +67,13 @@ Starting config with your `appsettings.json` :
   }
 }
 ```
+
+## Copyright
+
+Copyright (c) Jungyoung bang.
+
+### POLLY
+
+[Polly](https://github.com/App-vNext/Polly)
+
+
